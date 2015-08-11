@@ -1,0 +1,33 @@
+grammar org.kevoree.modeling.MetaModel with org.eclipse.xtext.common.Terminals
+
+
+generate metaModel "http://www.kevoree.org/modeling/MetaModel"
+
+Model:
+	annotations+=annotationDeclr* declarations+=decl*;
+	
+typeName : ID ('.' ID)*;
+	
+decl : enumDeclr | classDeclr;	
+	
+enumDeclr : 'enum' typeName '{' ID (',' ID)* '}';
+
+classDeclr : 'class' typeName classParentDeclr? '{' annotations+=annotationDeclr* declarations+=classElemDeclr* '}';
+	
+classElemDeclr : attributeDeclaration | referenceDeclaration | dependencyDeclaration | inputDeclaration | outputDeclaration;
+	
+classParentDeclr : 'extends' typeName (',' typeName )*;
+
+attributeDeclaration : 'att' ID ':' attributeType annotationDeclr*;
+
+attributeType : 'String' | 'Double' | 'Long' | 'Continuous' | 'Int' | 'Bool' | typeName;
+
+referenceDeclaration : ('ref' | 'ref*') ID ':' typeName annotationDeclr*;
+
+dependencyDeclaration : 'dependency' ID ':' typeName;
+
+inputDeclaration : 'input' ID STRING;
+
+outputDeclaration : 'output' ID ':' attributeType;
+
+annotationDeclr : 'with' ID (INT|STRING)?;

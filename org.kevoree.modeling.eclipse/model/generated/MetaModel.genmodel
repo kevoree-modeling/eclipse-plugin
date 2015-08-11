@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.kevoree.modeling.eclipse/src-gen" editDirectory="/org.kevoree.modeling.eclipse.edit/src"
+    editorDirectory="/org.kevoree.modeling.eclipse.editor/src" modelPluginID="org.kevoree.modeling.eclipse"
+    forceOverwrite="true" modelName="MetaModel" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="org.kevoree.modeling.eclipse.edit"
+    editorPluginID="org.kevoree.modeling.eclipse.editor" runtimeVersion="2.11">
+  <genPackages prefix="MetaModel" basePackage="org.kevoree.modeling" disposableProviderFactory="true"
+      fileExtensions="mm" ecorePackage="MetaModel.ecore#/">
+    <genClasses ecoreClass="MetaModel.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//Model/annotations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MetaModel.ecore#//Model/declarations"/>
+    </genClasses>
+    <genClasses ecoreClass="MetaModel.ecore#//decl"/>
+    <genClasses ecoreClass="MetaModel.ecore#//classDeclr">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//classDeclr/annotations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//classDeclr/declarations"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
