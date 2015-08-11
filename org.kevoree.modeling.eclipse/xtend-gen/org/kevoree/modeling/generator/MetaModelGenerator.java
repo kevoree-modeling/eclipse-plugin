@@ -16,6 +16,6 @@ import org.eclipse.xtext.generator.IGenerator;
 public class MetaModelGenerator implements IGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
-    System.out.println("Hello");
+    System.out.println("TODO insert code generation here...");
   }
 }

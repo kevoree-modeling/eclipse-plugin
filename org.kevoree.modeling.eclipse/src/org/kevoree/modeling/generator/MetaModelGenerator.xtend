@@ -16,8 +16,7 @@ class MetaModelGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		
-
-		System.out.println("Hello");
+		System.out.println("TODO insert code generation here...");
 		
 //		fsa.generateFile('greetings.txt', 'People to greet: ' + 
 //			resource.allContents
